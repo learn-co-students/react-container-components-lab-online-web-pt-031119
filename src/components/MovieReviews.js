@@ -7,7 +7,7 @@ const MovieReviews = ({review}) => (
       <h2>{review.headline}</h2>
       <h3>{review.byLine}</h3>
       <h4>{review.summary_short}</h4>
-      <p>{review.link.url}</p>
+      <a href={review.link.url}>Link to story</a>
     </div>
   </div>
 )
