@@ -17,7 +17,6 @@ class SearchableMovieReviewsContainer extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    let movieList = []
     fetch(`${URL}`+`${this.state.searchTerm}`+`${NYT_API_KEY}`)
     .then(response => response.json())
     .then(json => {
