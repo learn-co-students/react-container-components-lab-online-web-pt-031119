@@ -10,7 +10,8 @@ const MovieReviews = ({reviews}) => {
 
   return(
     <div className="review-list">
-      {reviews.map(review => <li key={review.display_title}>{review.display_title}</li>)}
+
+      {reviews && reviews.map(review => <li className="review" key={review.display_title}>{review.display_title}</li>)}
     </div>
   )
 
