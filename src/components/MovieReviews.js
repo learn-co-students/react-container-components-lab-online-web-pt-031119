@@ -1,40 +1,20 @@
 // Code MovieReviews Here
-import React, { Component } from 'react';
-import Review from './Review'
+import React from 'react';
+// import Review from './Review'
 
-const MovieReviews = () => {
-
-  // constructor(props){
-  //   super(props)
-  // }
+const MovieReviews = ({reviews}) => {
 
 
-// const reviewCards = reviews.map(review => {
-//   return <Review key={review.link.url} review={review} />
-// })
 
-
-// componentDidMount() {
-//
-// }
 
 
   return(
     <div className="review-list">
+      {reviews.map(review => <li key={review.display_title}>{review.display_title}</li>)}
     </div>
   )
 
 
-
-// MovieReviews.defaultProps = {
-//   reviews: []
-// }
-
 }
 
 export default MovieReviews;
-
-
-// {reviews.map(review =>
-//
-// )}

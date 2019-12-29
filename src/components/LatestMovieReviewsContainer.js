@@ -19,7 +19,6 @@ class LatestMovieReviewsContainer extends Component {
 
   componentDidMount() {
     this.onFindReviews();
-    console.log(this.state)
   }
 
   onFindReviews = () => {
