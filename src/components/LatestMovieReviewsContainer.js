@@ -19,16 +19,17 @@ class LatestMovieReviewsContainer extends Component {
 
   componentDidMount() {
     this.onFindReviews();
+    console.log(this.state)
   }
 
   onFindReviews = () => {
-    return fetch(URL)
+    fetch(URL)
       .then(response => response.json())
       .then(reviewData => {
         this.setState(
           { reviews: reviewData.results }
         )
-    })
+    }).catch(error => console.log(error))
   }
 
   render() {
