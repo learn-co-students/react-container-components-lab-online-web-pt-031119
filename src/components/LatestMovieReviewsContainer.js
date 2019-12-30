@@ -15,18 +15,17 @@ export default class LatestMovieReviewsContainer extends Component {
     
    state = {
        reviews: [],
-   }
+     }
 
   fetchMovies = () => {
       fetch(URL)
       .then(response => response.json())
-      .then(json => sortFetch(json))
-  }
+      .then(json => this.sortFetch(json))
+    }
 
-  sortFetch = (json) => {
+  sortFetch(json) {
       console.log("it worked")
-  }
-
+    }
 
 
     render() {
