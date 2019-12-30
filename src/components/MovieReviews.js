@@ -1,12 +1,19 @@
 // Code MovieReviews Here
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class MovieReviews extends Component {
-    render() {
+const MovieReviews = (props) => {  
+    const rendList = props.reviews.map((review, index) => {
         return (
-            <div>
-                
+            <div className="review" key={index}>
+                <a href={review.link.url}>{review.headline}</a><br/>
             </div>
         )
-    }
+    })
+        return ( 
+            <div className="review-list" >
+                {rendList} 
+            </div>           
+        )               
 }
+
+export default MovieReviews
